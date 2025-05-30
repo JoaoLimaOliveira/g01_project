@@ -47,7 +47,7 @@ class Course(Gclass):
     # date property getter method
     @property
     def course_name(self):
-        return self._name
+        return self._course_name
     # date property setter method
     @course_name.setter
     def course_name(self, name):

@@ -7,8 +7,10 @@ from classes.course_student import Course_Student
 from classes.userlogin import Userlogin
 from subs.apps_course import apps_Course
 from subs.apps_gform import apps_gform 
+from subs.apps_plotly import apps_plotly
 from subs.apps_subform import apps_subform
 from subs.apps_userlogin import apps_userlogin
+
 
 app = Flask(__name__)
 Department.read(filename + 'business.db')
@@ -44,6 +46,11 @@ def chklogin():
 def gform(cname):
     return apps_gform(cname)
 
+
+@app.route("/plotly",methods=["post","get"])
+def plotly():
+    return apps_plotly()
+    
 @app.route("/Userlogin", methods=["post","get"])
 def userlogin():
     return apps_userlogin()

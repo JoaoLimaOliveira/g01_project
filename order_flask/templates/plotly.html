@@ -1,0 +1,25 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div style="text-align: center; margin-bottom: 20px;">
+        <h2 style="color: #2c3e50; font-family: 'Arial', sans-serif;">📊 Academic Performance</h2>
+    </div>
+    
+    {{ plot_div | safe }}
+    
+    
+    <br>
+    <div style="height: 60px;"></div>
+    
+    <div style="text-align: center;">
+        <a class="button" href="/" style="background-color: #3498db; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none;">
+            Back to Home
+        </a>
+    </div>
+    
+{% endblock %}

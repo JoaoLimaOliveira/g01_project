@@ -32,7 +32,7 @@ class Department(Gclass):
     # name property getter method
     @property
     def department_name(self):
-        return self._name
+        return self._department_name
     # name property setter method
     @department_name.setter
     def department_name(self, name):
